@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" >
+
+    <HBox>
+
+        <VBox prefHeight="400" prefWidth="400" style="-fx-background-color: white;">
+
+
+
+            <Label text="Menu">
+            <VBox.margin>
+               <Insets left="150.0" top="20.0" />
+            </VBox.margin>
+            <font>
+               <Font name="Calibri" size="25.0" />
+            </font></Label>
+
+            <JFXComboBox fx:id="boisson" focusColor="#22b199" labelFloat="true" prefWidth="250" promptText="Boisson">
+            <VBox.margin>
+               <Insets left="40.0" top="40.0" />
+            </VBox.margin></JFXComboBox>
+            <HBox>
+            <JFXComboBox fx:id="repas" focusColor="#22b199" labelFloat="true" prefWidth="250" promptText="Repas">
+            <VBox.margin>
+               <Insets left="40.0" top="30.0" />
+            </VBox.margin>
+               <HBox.margin>
+                  <Insets left="40.0" top="30.0" />
+               </HBox.margin></JFXComboBox>
+
+                <JFXCheckBox fx:id="supcheckbox" onAction="#supchecked" text="Sup">
+               <HBox.margin>
+                  <Insets left="10.0" top="40.0" />
+               </HBox.margin></JFXCheckBox>
+            </HBox>
+            <JFXComboBox fx:id="supplement" focusColor="#22b199" labelFloat="true" prefWidth="250" promptText="Supplement" visible="false">
+            <VBox.margin>
+               <Insets left="40.0" top="30.0" />
+            </VBox.margin></JFXComboBox>
+            <JFXButton buttonType="RAISED" onAction="#ajouter" prefWidth="250.0" style="-fx-background-color: #16a085;" text="Ajouter" textFill="WHITE">
+                <font>
+                    <Font name="Calibri" size="20.0" />
+                </font>
+                <VBox.margin>
+                    <Insets left="40.0" top="50.0" />
+                </VBox.margin></JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#validerpan" prefWidth="250.0" style="-fx-background-color: #16a085;" text="Valider la commande" textFill="WHITE">
+                <font>
+                    <Font name="Calibri" size="20.0" />
+                </font>
+                <VBox.margin>
+                    <Insets left="40.0" top="30.0" />
+                </VBox.margin></JFXButton>
+
+        </VBox>
+        <VBox prefHeight="400" prefWidth="400" style="-fx-background-color: white;">
+
+            <JFXTreeTableView fx:id="Panier">
+            <VBox.margin>
+               <Insets right="40.0" top="20.0" />
+            </VBox.margin></JFXTreeTableView>
+
+        </VBox>
+        <VBox prefHeight="400" prefWidth="200" style="-fx-background-color: c8d3cc;">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cart.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="50.0" top="50.0" />
+               </VBox.margin>
+            </ImageView>
+
+             <Label text="Prix">
+               <font>
+                  <Font name="Calibri Bold" size="30.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="80.0" top="10.0" />
+               </VBox.margin></Label>
+             <Label fx:id="prixcalcule" text="00.00">
+               <VBox.margin>
+                  <Insets left="90.0" top="10.0" />
+               </VBox.margin></Label>
+             <Label text="Net" textFill="#21c95e">
+               <font>
+                  <Font name="Calibri Bold" size="30.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="80.0" top="20.0" />
+               </VBox.margin></Label>
+             <Label fx:id="prixnet" text="00.00">
+               <VBox.margin>
+                  <Insets left="90.0" top="10.0" />
+               </VBox.margin></Label>
+
+         </children></VBox>
+    </HBox>
+
+</AnchorPane>

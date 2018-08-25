@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Stats">
+
+    <VBox>
+        <ScrollPane>
+            <VBox prefHeight="400" prefWidth="600">
+
+                <HBox>
+                <Label text="debut" />
+                <JFXTimePicker fx:id="td" />
+                <JFXDatePicker fx:id="dd" />
+               <VBox.margin>
+                  <Insets left="15.0" top="20.0" />
+               </VBox.margin>
+                </HBox>
+                <HBox>
+                <Label text="fin" />
+                <JFXTimePicker fx:id="tf" />
+                <JFXDatePicker fx:id="df" />
+               <VBox.margin>
+                  <Insets bottom="20.0" left="30.0" top="30.0" />
+               </VBox.margin>
+                </HBox>
+
+                <JFXButton buttonType="RAISED"  prefWidth="200.0" onAction="#requete" style="-fx-background-color: #16a085;" text="Soumettre" textFill="WHITE">
+                    <font>
+                        <Font name="Calibri" size="20.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="150.0" top="25.0" bottom="20" />
+                    </VBox.margin></JFXButton>
+
+
+
+                <ListView fx:id="list">
+               <padding>
+                  <Insets left="15.0" top="10.0" />
+               </padding></ListView>
+
+
+
+
+            </VBox>
+
+        </ScrollPane>
+
+    </VBox>
+
+</AnchorPane>

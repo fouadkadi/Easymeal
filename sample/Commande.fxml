@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Commandcontroller">
+    <VBox prefHeight="550.0" prefWidth="900.0">
+      <children>
+         <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@supper.png" />
+            </image>
+            <VBox.margin>
+               <Insets left="350.0" top="10.0" />
+            </VBox.margin>
+         </ImageView>
+         <Label text="Commander">
+            <font>
+               <Font name="Calibri" size="30.0" />
+            </font>
+            <VBox.margin>
+               <Insets left="350.0" top="10.0" />
+            </VBox.margin>
+         </Label>
+          <ScrollPane style="-fx-border-color: white;">
+         <VBox>
+
+             <VBox prefWidth="445">
+             <Label text="Commande a domicile">
+                     <font>
+                        <Font name="Calibri Light" size="25.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="320.0" top="20.0" />
+                     </VBox.margin></Label>
+
+                 
+                 <JFXTextField fx:id="d_num" focusColor="#22b199"  labelFloat="true" maxWidth="650.0" minWidth="-Infinity" prefHeight="25.0" prefWidth="650.0" promptText="Numéro de téléphone">
+                     <VBox.margin>
+                         <Insets left="100.0" top="20.0" />
+                     </VBox.margin></JFXTextField>
+                 <HBox>
+                 <JFXTimePicker fx:id="d_time" promptText="Heure">
+                     <VBox.margin>
+                        <Insets left="100.0" top="20.0" />
+                     </VBox.margin></JFXTimePicker>
+
+                     <JFXTextField focusColor="#16a085" fx:id="d_nember" labelFloat="true" maxWidth="200" promptText="nombre de personnes">
+                        <HBox.margin>
+                           <Insets left="30.0" />
+                        </HBox.margin></JFXTextField>
+                     <JFXTextField focusColor="#16a085" fx:id="d_distance" labelFloat="true" maxWidth="400.0" prefWidth="200.0" promptText="Distance">
+                         <HBox.margin>
+                             <Insets left="50.0" />
+                         </HBox.margin></JFXTextField>
+                     <VBox.margin>
+                        <Insets left="100.0" top="20.0" />
+                     </VBox.margin>
+                 </HBox>
+                 <HBox>
+                 <JFXTextField focusColor="#16a085" fx:id="d_adr" labelFloat="true" maxWidth="500.0" prefWidth="500.0" promptText="Adresse">
+                     </JFXTextField>
+
+                     <VBox.margin>
+                        <Insets left="100.0" top="20.0" />
+                     </VBox.margin>
+                 </HBox>
+                 <JFXButton buttonType="RAISED" onAction="#commandeadomicile" style="-fx-background-color: #16a085;" text="Passer la commande" textFill="WHITE">
+                     <font>
+                         <Font name="Calibri" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                         <Insets left="330.0" top="30.0" />
+                     </VBox.margin></JFXButton>
+             </VBox>
+
+             <VBox prefWidth="445">
+                 <Label text="Commande sur place">
+                     <font>
+                         <Font name="Calibri Light" size="25.0" />
+                     </font>
+                     <VBox.margin>
+                         <Insets left="320.0" top="30.0" />
+                     </VBox.margin></Label>
+
+
+                 <JFXTextField focusColor="#22b199" fx:id="p_num" labelFloat="true"  maxWidth="650.0" minWidth="-Infinity" prefHeight="25.0" prefWidth="650.0" promptText="Numéro de téléphone">
+                     <VBox.margin>
+                         <Insets left="100.0" top="20.0" />
+                     </VBox.margin></JFXTextField>
+                 <HBox>
+                     <JFXTimePicker fx:id="p_time" promptText="Heure">
+                         <VBox.margin>
+                             <Insets left="100.0" top="20.0" />
+                         </VBox.margin></JFXTimePicker>
+
+                     <JFXTextField focusColor="#22b199" fx:id="p_nbper" labelFloat="true" maxWidth="200" promptText="nombre de personnes">
+                         <HBox.margin>
+                             <Insets left="30.0" />
+                         </HBox.margin></JFXTextField>
+
+                     <VBox.margin>
+                         <Insets left="100.0" top="20.0" />
+                     </VBox.margin>
+                 </HBox>
+                 <JFXComboBox focusColor="#22b199" fx:id="p_table" labelFloat="true" promptText="Type de table">
+                     <items>
+                         <FXCollections fx:factory="observableArrayList">
+                             <String fx:value="interieur" />
+                             <String fx:value="exterieur" />
+
+                         </FXCollections>
+                     </items>
+                     <VBox.margin>
+                         <Insets left="100.0" top="20.0" />
+                     </VBox.margin>
+                     <HBox.margin>
+                         <Insets left="30.0" />
+                     </HBox.margin>
+                 </JFXComboBox>
+                 <JFXButton buttonType="RAISED" onAction="#commandeasurpalce" style="-fx-background-color: #16a085;" text="Passer la commande" textFill="WHITE">
+                     <font>
+                         <Font name="Calibri" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                         <Insets bottom="20.0" left="330.0" top="30.0" />
+                     </VBox.margin></JFXButton>
+             </VBox>
+
+             <VBox prefWidth="445">
+                 <Label text="Evenement">
+                     <font>
+                         <Font name="Calibri Light" size="25.0" />
+                     </font>
+                     <VBox.margin>
+                         <Insets left="370.0" top="30.0" />
+                     </VBox.margin></Label>
+
+
+                 <JFXTextField focusColor="#22b199" labelFloat="true" fx:id="e_num" maxWidth="650.0" minWidth="-Infinity" prefHeight="25.0" prefWidth="650.0" promptText="Numéro de téléphone">
+                     <VBox.margin>
+                         <Insets left="100.0" top="20.0" />
+                     </VBox.margin></JFXTextField>
+                 <HBox>
+                     <JFXTimePicker fx:id="e_time" promptText="Heure">
+                         <VBox.margin>
+                             <Insets left="100.0" top="20.0" />
+                         </VBox.margin></JFXTimePicker>
+                     <JFXDatePicker fx:id="e_date" promptText="Date">
+                         <VBox.margin>
+                             <Insets left="110.0" top="20.0" />
+                         </VBox.margin></JFXDatePicker>
+
+                     <JFXTextField focusColor="#22b199" fx:id="e_nbper" labelFloat="true" maxWidth="200" promptText="nombre de personnes">
+                         <HBox.margin>
+                             <Insets left="30.0" />
+                         </HBox.margin></JFXTextField>
+
+                     <VBox.margin>
+                         <Insets left="100.0" top="20.0" />
+                     </VBox.margin>
+                 </HBox>
+                 <HBox>
+                     <JFXTextField focusColor="#22b199" fx:id="e_tema" labelFloat="true" prefWidth="200.0" promptText="Thématique" />
+                     <JFXTextField focusColor="#22b199" fx:id="e_dec" labelFloat="true" prefWidth="200.0" promptText="Decord">
+                         <HBox.margin>
+                             <Insets left="50.0" />
+                         </HBox.margin></JFXTextField>
+                     <JFXComboBox focusColor="#22b199" fx:id="e_type" labelFloat="true" promptText="Type">
+                         <items>
+                             <FXCollections fx:factory="observableArrayList">
+                                 <String fx:value="anniversaire" />
+                                 <String fx:value="Diplome" />
+                                 <String fx:value="marriage" />
+                                 <String fx:value="retraite" />
+
+                             </FXCollections>
+                         </items>
+                        <HBox.margin>
+                           <Insets left="20.0" />
+                        </HBox.margin>
+                     </JFXComboBox>
+                     <VBox.margin>
+                         <Insets left="100.0" top="30.0" />
+                     </VBox.margin>
+                 </HBox>
+                 <JFXButton buttonType="RAISED" onAction="#commandeevent" style="-fx-background-color: #16a085;" text="Passer la commande" textFill="WHITE">
+                     <font>
+                         <Font name="Calibri" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                         <Insets bottom="20.0" left="330.0" top="30.0" />
+                     </VBox.margin></JFXButton>
+             </VBox>
+
+         </VBox>
+      </ScrollPane>
+
+      </children></VBox>
+
+</AnchorPane>

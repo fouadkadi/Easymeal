@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="550" prefWidth="300" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Slidecontroller">
+    <children>
+        <ImageView fitHeight="250.0" fitWidth="300" onMousePressed="#home" pickOnBounds="true">
+            <image>
+                <Image url="@esimeal.png" />
+            </image>
+        </ImageView>
+
+        <ButtonBar onMousePressed="#Stock" style="-fx-background-color: #ecf0e0;">
+            <buttons>
+                <HBox prefHeight="75.0" prefWidth="300.0">
+                    <children>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@003-worker-loading-boxes.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets left="10.0" top="12.0" />
+                            </HBox.margin></ImageView>
+                        <Label alignment="BASELINE_RIGHT" text="Charger le stock">
+                            <HBox.margin>
+                                <Insets left="30.0" top="28.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font name="Calibri" size="25.0" />
+                            </font></Label>
+                    </children></HBox>
+            </buttons>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ButtonBar>
+
+        <ButtonBar onMousePressed="#login" style="-fx-background-color: #ecf0f1;">
+            <buttons>
+                <HBox prefHeight="75.0" prefWidth="300.0">
+                    <children>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@002-login.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets left="10.0" top="12.0" />
+                            </HBox.margin></ImageView>
+                        <Label alignment="BASELINE_RIGHT" text="S'inscrire">
+                            <HBox.margin>
+                                <Insets left="30.0" top="28.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font name="Calibri" size="25.0" />
+                            </font></Label>
+                    </children></HBox>
+            </buttons>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ButtonBar>
+
+        <ButtonBar onMousePressed="#stat" style="-fx-background-color: #ecf0ff;">
+            <buttons>
+                <HBox prefHeight="75.0" prefWidth="300.0">
+                    <children>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@line-chart.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets left="10.0" top="12.0" />
+                            </HBox.margin></ImageView>
+                        <Label alignment="BASELINE_RIGHT" text="Statistiques">
+                            <HBox.margin>
+                                <Insets left="30.0" top="28.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font name="Calibri" size="25.0" />
+                            </font></Label>
+                    </children></HBox>
+            </buttons>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ButtonBar>
+        <ButtonBar onMousePressed="#Commande" style="-fx-background-color: #ecf0ff;">
+            <buttons>
+                <HBox prefHeight="75.0" prefWidth="300.0">
+                    <children>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@001-restaurant.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets left="10.0" top="12.0" />
+                            </HBox.margin></ImageView>
+                        <Label alignment="BASELINE_RIGHT" text="Commander">
+                            <HBox.margin>
+                                <Insets left="30.0" top="28.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font name="Calibri" size="25.0" />
+                            </font></Label>
+                    </children></HBox>
+            </buttons>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></ButtonBar>
+    </children>
+
+</VBox>

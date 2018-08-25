@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" >
+
+
+  <GridPane>
+
+    <Pane maxHeight="50" prefWidth="1200.0" style="-fx-background-color: gray;">
+         <GridPane.margin>
+            <Insets bottom="550.0" />
+         </GridPane.margin>
+
+    </Pane>
+    <VBox prefHeight="600" prefWidth="1200">
+        <children>
+            <JFXHamburger fx:id="hamburger" layoutX="1000.0" layoutY="14.0" maxWidth="50.0" onMousePressed="#click" prefHeight="50.0" prefWidth="682.0" style="-fx-background-color: #d35400;">
+                <opaqueInsets>
+                    <Insets />
+                </opaqueInsets>
+                <VBox.margin>
+                    <Insets left="1150.0" />
+                </VBox.margin></JFXHamburger>
+
+            <JFXDrawer fx:id="drawer" defaultDrawerSize="300.0" prefHeight="550" prefWidth="300" />
+
+
+        </children>
+
+    </VBox>
+
+      <VBox fx:id="container" prefHeight="550" prefWidth="900">
+          <GridPane.margin>
+              <Insets left="300.0" top="50.0" />
+          </GridPane.margin></VBox>
+      <columnConstraints>
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+      </rowConstraints>
+  </GridPane>
+   <ImageView fitHeight="30" fitWidth="30" layoutX="-298.0" layoutY="323.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@user.png" />
+      </image>
+   </ImageView>
+</AnchorPane>
